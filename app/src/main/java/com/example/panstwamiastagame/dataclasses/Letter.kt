@@ -1,7 +1,6 @@
 package com.example.panstwamiastagame.dataclasses
 
 import androidx.compose.ui.graphics.Color
-import java.util.UUID
 
 data class Letter(
     val letter: String,

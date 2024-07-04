@@ -4,14 +4,11 @@ import android.annotation.SuppressLint
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.example.panstwamiastagame.dataclasses.Letter
 import com.example.panstwamiastagame.dataclasses.Settings
-import kotlinx.coroutines.launch
 import kotlin.random.Random
 
 @SuppressLint("MutableCollectionMutableState")
