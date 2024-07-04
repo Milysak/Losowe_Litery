@@ -37,8 +37,6 @@ fun GameScreen(
     viewModel: GameViewModel = viewModel(),
     navController: NavController,
 ) {
-    val mContext = LocalContext.current
-
     val lazyRowState = rememberLazyListState()
 
     val coroutineScope = rememberCoroutineScope()
