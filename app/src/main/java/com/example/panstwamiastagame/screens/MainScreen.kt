@@ -23,10 +23,10 @@ import com.example.panstwamiastagame.viewmodels.MainViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
 import com.example.panstwamiastagame.R
-import com.example.panstwamiastagame.Routes
 import com.example.panstwamiastagame.components.mainscreen.RoundSetter
 import com.example.panstwamiastagame.components.mainscreen.SectionMainScreen
 import com.example.panstwamiastagame.components.mainscreen.TimeSetter
+import com.example.panstwamiastagame.navigation.Routes
 
 @Composable
 fun MainScreen(

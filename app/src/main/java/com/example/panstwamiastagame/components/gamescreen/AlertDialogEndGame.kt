@@ -14,11 +14,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.Lifecycle
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.panstwamiastagame.R
@@ -40,7 +40,7 @@ fun AlertDialogEndGame(
                 confirmButton = {
                     Button(
                         onClick = {
-                            navController.popBackStack()
+                            navController.popBackStackOrIgnore()
                         },
                         colors = ButtonDefaults.buttonColors().copy(
                             containerColor = Color(0xff78ABA8),
@@ -82,4 +82,10 @@ fun AlertDialogEndGame(
 @Preview
 fun AlertDialogEndGamePreview() {
     AlertDialogEndGame(endGame = true, navController = rememberNavController())
+}
+
+fun NavController.popBackStackOrIgnore() {
+    if (currentBackStackEntry?.lifecycle?.currentState == Lifecycle.State.RESUMED) {
+        popBackStack()
+    }
 }
